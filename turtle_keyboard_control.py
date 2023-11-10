@@ -18,13 +18,13 @@ space key, s : stop
 CTRL-C to quit
 """
 
-###TODO: Fill in the alphabet keys you'd want to control the turtle with. (move up, down, left, right). Be sure to update the message above for the keys you choose###
-# moveKeys = {
-#     '__': (1, 0),
-#     '__': (-1, 0),
-#     '__': (0, 1),
-#     '__': (0, -1),
-# }
+### Fill in the alphabet keys you'd want to control the turtle with. (move up, down, left, right). Be sure to update the message above for the keys you choose###
+moveKeys = {
+    'w': (1, 0),
+   'a': (-1, 0),
+    's': (0, 1),
+    'd': (0, -1),
+ }
 
 def getKey():
     tty.setraw(sys.stdin.fileno())
@@ -34,9 +34,9 @@ def getKey():
     return key
 
 
-###TODO: Change the velocity and turning speed (float) ###
-# speed = 
-# turn = 
+### Change the velocity and turning speed (float) (you can always change it!) ###
+ speed = 
+ turn = 
  
 def vels(speed, turn):
     return "currently:\tspeed %s\tturn %s " % (speed, turn)
@@ -44,10 +44,10 @@ def vels(speed, turn):
 if __name__=="__main__":
     settings = termios.tcgetattr(sys.stdin)
     
-    ###TODO: Initialize a ros node named turtle_keyboard_control ###
-
-    ###TODO: Create a publisher that publishes to the /turtle1/cmd_vel topic (it's built into the turtlesim environment) ###
-    # pub =  # Create publisher 
+    ### Initialize a ros node named turtle_keyboard_control ###
+### ros nodes get weird with my computer###
+    ### Create a publisher that publishes to the /turtle1/cmd_vel topic (it's built into the turtlesim environment) ###
+     pub =  Create publisher 
 
     try:
         print(msg)
@@ -64,21 +64,21 @@ if __name__=="__main__":
                 if (key == '\x03'):
                     break
             
-            ###TODO: create a new Twist message ###
-            # __ =   
-            # __.linear.x = x * speed
-            # __.angular.z = theta * turn
+            ### create a new Twist message ###
+             __ =   
+             __.linear.x = x * speed
+             __.angular.z = theta * turn
 
-            # pub.publish(__)
+             pub.publish(__)
 
     except Exception as e:
         print(e)
 
     finally:
         ###TODO: Do the same as before, create a new Twist message. This is to stop the turtle after exiting ###
-        # __ =  
-        # __.linear.x = 0
-        # __.angular.z = 0
-        # pub.publish(__)
+         __ =  
+         __.linear.x = 0
+         __.angular.z = 0
+         pub.publish(__)
 
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
