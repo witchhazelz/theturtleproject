@@ -36,16 +36,16 @@ class Locator:
             safezone data being published is updated (the center of the circle) we want to 
             update our understanding of our submarine's location relative to the circle
             """
-            #TODO extract the x and y position data from the message that is being passed
+            # extract the x and y position data from the message that is being passed
             # through this callback function
            
-            #x_center = safezone_data pose.position.x
-            #y_center = safezone_data pose.position.y
+            x_center = safezone_data pose.position.x
+            y_center = safezone_data pose.position.y
 
             #TODO calculate the distance between the submarine's position and the center of the
             # circle defining the safezone (hint: use math.sqrt())
             
-            #distance = math.sqrt(x),y)
+            distance = math.sqrt(x),y)
             
             if distance <= 8:
                 in_zone = 1
@@ -65,14 +65,14 @@ class Locator:
         # center information, specifying the topic, ROS message type for that topic, and the
         # callback function:
         
-        #Safezone_Data = 
+        Safezone_Data = 
 
         #Initialize publishers which will publish the 2 pieces of data derived from the 
         # previously subscribed-to topic so that they are published to 2 new topics (inside_topic,
         # distance_topic). These should specify the message type being used (float32):
         
-        #Inside_Safezone_Result = 
-        #Distance_From_Center = 
+        Inside_Safezone_Result = 
+        Distance_From_Center = 
 
 if __name__ == "__main__":
     
