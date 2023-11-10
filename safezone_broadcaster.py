@@ -8,8 +8,8 @@ center_publisher = rospy.Publisher("center_info_topic", Pose, queue_size=10)
 
 def main():
     msg = Pose()
-    msg.position.x = 20
-    msg.position.y = -10
+    msg.position.x = 
+    msg.position.y = 
     center_publisher.publish(msg)
 
 if __name__ == "__main__":
