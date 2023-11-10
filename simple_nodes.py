@@ -61,7 +61,7 @@ class Locator:
             
         rate = rospy.Rate(10)
         
-        #TODO: Initialize the subscriber which will monitor the topic containing the circle's
+        # We initialize the subscriber which will monitor the topic containing the circle's
         # center information, specifying the topic, ROS message type for that topic, and the
         # callback function:
         
@@ -75,9 +75,9 @@ class Locator:
         #Distance_From_Center = 
 
 if __name__ == "__main__":
-    #### TODO ####
+    
     # initialize a ROS node named  "locator_node" on the line below
-    #node = locator_node
+    node = locator_node
     
     Locator()
     rospy.spin()
